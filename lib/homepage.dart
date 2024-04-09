@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:navigation/page_one.dart';
+import 'package:navigation/page_two.dart';
 
 class MyHomePage extends StatelessWidget {
+  static const String routeName = 'home';
   const MyHomePage({super.key});
 
   @override
@@ -16,12 +19,13 @@ class MyHomePage extends StatelessWidget {
           children: [
             ElevatedButton(
                 onPressed: () {
-                  context.go('/one');
+                 // context.goNamed('one');//go with .goNamed
+                  context.goNamed(PageOne.routeName);
                 },
                 child: const Text('Page One')),
             ElevatedButton(
                 onPressed: () {
-                  context.go('/two');
+                  context.goNamed(PageTwo.routeName);
                 },
                 child: const Text('Page Two'))
           ],

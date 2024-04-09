@@ -30,13 +30,18 @@ class MyApp extends StatelessWidget {
 
   final _router = GoRouter(initialLocation: '/', routes: [
     GoRoute(
+      //name: 'Home',
+      name: MyHomePage.routeName,
         path: '/',
         builder: (context, state) => const MyHomePage()),
     GoRoute(
+     // name: 'one',
+      name: PageOne.routeName,
         path: '/one',
         builder: (context, state) => const PageOne(),
     routes:[
       GoRoute(
+        name: 'One Details',
         path: 'onedetails',
         builder: (context , state) => const PageOneDetails()
     ),  //child of another route doesnt need to put forward slash
@@ -44,6 +49,8 @@ class MyApp extends StatelessWidget {
         ]
     ),
     GoRoute(
+      // name: 'two',
+        name: PageTwo.routeName,
         path: '/two',
         builder: (context, state) => const PageTwo()),
 

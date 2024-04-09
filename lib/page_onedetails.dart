@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class PageOneDetails extends StatelessWidget {
+  static const String routeName = 'oneDet';
   const PageOneDetails({super.key});
 
   @override

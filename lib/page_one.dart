@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 class PageOne extends StatelessWidget {
+  static const String routeName = 'one';
   const PageOne({super.key});
 
   @override
@@ -17,7 +18,7 @@ class PageOne extends StatelessWidget {
             ElevatedButton(
                 onPressed: () {
                   context.go('/one/onedetails');  //child details should be given like this.
-                },
+                },//go with .go
                 child: const Text('Page One Details'))
           ],
         ),
