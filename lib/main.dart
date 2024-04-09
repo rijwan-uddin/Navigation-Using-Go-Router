@@ -3,6 +3,7 @@ import 'dart:js';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:navigation/page_one.dart';
+import 'package:navigation/page_onedetails.dart';
 import 'package:navigation/page_two.dart';
 
 import 'homepage.dart';
@@ -33,9 +34,18 @@ class MyApp extends StatelessWidget {
         builder: (context, state) => const MyHomePage()),
     GoRoute(
         path: '/one',
-        builder: (context, state) => const PageOne()),
+        builder: (context, state) => const PageOne(),
+    routes:[
+      GoRoute(
+        path: 'onedetails',
+        builder: (context , state) => const PageOneDetails()
+    ),  //child of another route doesnt need to put forward slash
+
+        ]
+    ),
     GoRoute(
         path: '/two',
-        builder: (context, state) => const PageTwo())
+        builder: (context, state) => const PageTwo()),
+
   ]);
 }
