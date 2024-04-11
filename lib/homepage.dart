@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:navigation/page_four.dart';
 import 'package:navigation/page_one.dart';
+import 'package:navigation/page_three.dart';
 import 'package:navigation/page_two.dart';
 
 class MyHomePage extends StatelessWidget {
@@ -27,7 +29,18 @@ class MyHomePage extends StatelessWidget {
                 onPressed: () {
                   context.goNamed(PageTwo.routeName);
                 },
-                child: const Text('Page Two'))
+                child: const Text('Page Two')),
+            ElevatedButton(
+                onPressed: () {
+                  // context.goNamed('one');//go with .goNamed
+                  context.goNamed(PageThree.routeName);
+                },
+                child: const Text('Page three')),
+            ElevatedButton(
+                onPressed: () {
+                  context.goNamed(PageFour.routeName);
+                },
+                child: const Text('Page four'))
           ],
         ),
       ),

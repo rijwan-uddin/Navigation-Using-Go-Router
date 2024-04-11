@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class PageFour extends StatelessWidget {
-  static const String routeName = 'Four';
+  static const String routeName = 'four';
   const PageFour({super.key});
 
   @override
