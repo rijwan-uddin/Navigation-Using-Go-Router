@@ -16,7 +16,7 @@ class ProfilePage extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-Text('$id',style: Theme.of(context).textTheme.headlineLarge,)
+Text('$id',)
           ],
         ),
       ),
