@@ -1,4 +1,3 @@
-import 'dart:js';
 
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -7,6 +6,7 @@ import 'package:navigation/page_one.dart';
 import 'package:navigation/page_onedetails.dart';
 import 'package:navigation/page_three.dart';
 import 'package:navigation/page_two.dart';
+import 'package:navigation/profile_page.dart';
 
 import 'homepage.dart';
 
@@ -35,7 +35,20 @@ class MyApp extends StatelessWidget {
       //name: 'Home',
       name: MyHomePage.routeName,
         path: '/',
-        builder: (context, state) => const MyHomePage()),
+        builder: (context, state) => const MyHomePage(),
+    routes: [
+      GoRoute(
+          name: ProfilePage.routeName,
+          path: 'profile/:id',
+          builder: (context , state){
+           final id= state.pathParameters['id']!;
+            return ProfilePage(id: int.parse(id));
+          }
+      )
+
+    ]
+
+    ),
     GoRoute(
      // name: 'one',
       name: PageOne.routeName,

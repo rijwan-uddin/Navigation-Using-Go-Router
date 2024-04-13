@@ -4,6 +4,7 @@ import 'package:navigation/page_four.dart';
 import 'package:navigation/page_one.dart';
 import 'package:navigation/page_three.dart';
 import 'package:navigation/page_two.dart';
+import 'package:navigation/profile_page.dart';
 
 class MyHomePage extends StatelessWidget {
   static const String routeName = 'home';
@@ -40,7 +41,14 @@ class MyHomePage extends StatelessWidget {
                 onPressed: () {
                   context.goNamed(PageFour.routeName);
                 },
-                child: const Text('Page four'))
+                child: const Text('Page four')),
+            ElevatedButton(
+                onPressed: () {
+                  context.goNamed(ProfilePage.routeName,
+                      pathParameters: {'id' : '1'},
+                  );
+                },
+                child: const Text('Profile')),
           ],
         ),
       ),
