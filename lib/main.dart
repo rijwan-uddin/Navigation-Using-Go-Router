@@ -67,7 +67,12 @@ class MyApp extends StatelessWidget {
       // name: 'two',
         name: PageTwo.routeName,
         path: '/two',
-        builder: (context, state) => const PageTwo()),
+        builder: (context, state)
+        {
+
+          final msg= state.extra! as String;
+          return PageTwo(greetings: msg);
+        }),
     GoRoute(
       // name: 'two',
         name: PageThree.routeName,

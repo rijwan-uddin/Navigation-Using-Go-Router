@@ -12,11 +12,11 @@ class ProfilePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Profile'),
       ),
-      body: const Center(
+      body:  Center(
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-Text('$id',)
+Text('$id',),
           ],
         ),
       ),

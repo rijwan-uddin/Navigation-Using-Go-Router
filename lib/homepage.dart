@@ -28,7 +28,7 @@ class MyHomePage extends StatelessWidget {
                 child: const Text('Page One')),
             ElevatedButton(
                 onPressed: () {
-                  context.goNamed(PageTwo.routeName);
+                  context.goNamed(PageTwo.routeName,extra: 'Hello');
                 },
                 child: const Text('Page Two')),
             ElevatedButton(
@@ -57,3 +57,5 @@ class MyHomePage extends StatelessWidget {
 }
 //94  ... 5.07
 //95 finish
+
+//96 finished

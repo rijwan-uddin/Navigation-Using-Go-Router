@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 class PageTwo extends StatelessWidget {
   static const String routeName = 'two';
-  const PageTwo({super.key});
+  final String greetings;
+  const PageTwo({super.key, required this.greetings});
 
   @override
   Widget build(BuildContext context) {
@@ -10,11 +11,11 @@ class PageTwo extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Page Two'),
       ),
-      body: const Center(
+      body:  Center(
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-
+Text(greetings),
           ],
         ),
       ),
