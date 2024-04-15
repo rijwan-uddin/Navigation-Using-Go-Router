@@ -49,6 +49,12 @@ class MyHomePage extends StatelessWidget {
                   );
                 },
                 child: const Text('Profile')),
+    onPressed: () {
+    context.goNamed(ProfilePage.routeName,
+    pathParameters: {'id' : '1'},
+    );
+    },
+    child: const Text('Profile')),
           ],
         ),
       ),
